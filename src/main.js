@@ -3125,18 +3125,25 @@ Alpine.data('analyticsDashboard', () => ({
   async loadData() {
     try {
       if (window.SupabaseAnalytics) {
+        console.log('Loading analytics data from Supabase...');
         // Get data from Supabase
         const analyticsData = await window.SupabaseAnalytics.getAnalyticsData(this.dateRange);
-        this.events = this.formatEventsForLocalCompatibility(analyticsData.events);
-        this.formSubmissions = analyticsData.submissions;
+        console.log('Supabase analytics data:', analyticsData);
+        
+        this.events = this.formatEventsForLocalCompatibility(analyticsData.events || []);
+        this.formSubmissions = analyticsData.submissions || [];
+        
+        console.log('Formatted events:', this.events.length);
+        console.log('Form submissions:', this.formSubmissions.length);
       } else {
+        console.log('SupabaseAnalytics not available, using localStorage');
         // Fallback to localStorage
         this.events = Analytics.getEvents() || [];
         this.formSubmissions = Analytics.getFormSubmissions() || [];
       }
       this.calculateStats();
     } catch (error) {
-      console.warn('Failed to load analytics data:', error);
+      console.error('Failed to load analytics data:', error);
       // Fallback to localStorage on error
       this.events = Analytics.getEvents() || [];
       this.formSubmissions = Analytics.getFormSubmissions() || [];

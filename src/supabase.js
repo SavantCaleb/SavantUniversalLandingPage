@@ -1,6 +1,6 @@
 // Supabase client configuration
-const SUPABASE_URL = 'https://atchdevctikwbammpefo.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0Y2hkZXZjdGlrd2JhbW1wZWZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwMDI5NjksImV4cCI6MjA3NDU3ODk2OX0.x1d3sPuvIvF9nvthLFdLRUYUfiW4nl5dlOzmkTUgRFo';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://atchdevctikwbammpefo.supabase.co';
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF0Y2hkZXZjdGlrd2JhbW1wZWZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTkwMDI5NjksImV4cCI6MjA3NDU3ODk2OX0.x1d3sPuvIvF9nvthLFdLRUYUfiW4nl5dlOzmkTUgRFo';
 
 class SupabaseAnalytics {
   constructor() {
@@ -113,25 +113,41 @@ class SupabaseAnalytics {
   // Get location data from IP
   async getLocationData() {
     try {
-      // Try primary IP service
-      const response = await fetch('https://ipapi.co/json/');
+      // Try ipify.org first (more reliable CORS)
+      const response = await fetch('https://api.ipify.org?format=json');
       const data = await response.json();
-      return {
-        ip: data.ip || null,
-        country: data.country_name || 'unknown',
-        city: data.city || 'unknown',
-        region: data.region || 'unknown'
-      };
+      
+      if (data.ip) {
+        try {
+          // Try to get location data from a different service
+          const locationResponse = await fetch(`https://api.country.is/${data.ip}`);
+          const locationData = await locationResponse.json();
+          return {
+            ip: data.ip,
+            country: locationData.country || 'unknown',
+            city: 'unknown', // Most free services don't provide city
+            region: 'unknown'
+          };
+        } catch (locationError) {
+          // Just return with IP if location lookup fails
+          return {
+            ip: data.ip,
+            country: 'unknown',
+            city: 'unknown',
+            region: 'unknown'
+          };
+        }
+      }
     } catch (error) {
       try {
-        // Fallback to alternative IP service
-        const fallbackResponse = await fetch('https://api.ipify.org?format=json');
+        // Fallback to ipapi.co if available
+        const fallbackResponse = await fetch('https://ipapi.co/json/');
         const fallbackData = await fallbackResponse.json();
         return {
           ip: fallbackData.ip || null,
-          country: 'unknown',
-          city: 'unknown',
-          region: 'unknown'
+          country: fallbackData.country_name || 'unknown',
+          city: fallbackData.city || 'unknown',
+          region: fallbackData.region || 'unknown'
         };
       } catch (fallbackError) {
         // If all fails, return null for IP (valid for PostgreSQL INET type)
