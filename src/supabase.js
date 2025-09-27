@@ -424,42 +424,61 @@ class SupabaseAnalytics {
   // Get analytics data from Supabase
   async getAnalyticsData(dateRange = '7d') {
     try {
-      const daysAgo = dateRange === '1d' ? 1 : dateRange === '7d' ? 7 : 30;
-      const since = new Date(Date.now() - daysAgo * 24 * 60 * 60 * 1000).toISOString();
-
-      // Get events
-      const eventsResponse = await fetch(`${this.supabaseUrl}/rest/v1/events?timestamp=gte.${since}&order=timestamp.desc`, {
+      // Use Edge Function for CORS-compliant analytics data
+      const response = await fetch(`${this.supabaseUrl}/functions/v1/analytics-data?dateRange=${dateRange}`, {
         headers: {
           'apikey': this.supabaseKey,
-          'Authorization': `Bearer ${this.supabaseKey}`
+          'Authorization': `Bearer ${this.supabaseKey}`,
+          'Content-Type': 'application/json'
         }
       });
 
-      // Get form submissions
-      const submissionsResponse = await fetch(`${this.supabaseUrl}/rest/v1/form_submissions?submitted_at=gte.${since}&order=submitted_at.desc`, {
-        headers: {
-          'apikey': this.supabaseKey,
-          'Authorization': `Bearer ${this.supabaseKey}`
-        }
-      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-      // Get conversion funnel data
-      const funnelResponse = await fetch(`${this.supabaseUrl}/rest/v1/rpc/conversion_funnel`, {
-        headers: {
-          'apikey': this.supabaseKey,
-          'Authorization': `Bearer ${this.supabaseKey}`
-        }
-      });
-
-      const events = eventsResponse.ok ? await eventsResponse.json() : [];
-      const submissions = submissionsResponse.ok ? await submissionsResponse.json() : [];
-      const funnel = funnelResponse.ok ? await funnelResponse.json() : [];
-
-      return { events, submissions, funnel };
+      const data = await response.json();
+      
+      return { 
+        events: data.events || [], 
+        submissions: data.submissions || [], 
+        funnel: data.funnel || [],
+        recentActivity: data.recentActivity || []
+      };
       
     } catch (error) {
-      console.warn('Failed to get analytics data from Supabase, falling back to localStorage:', error);
-      return this.getLocalAnalyticsData();
+      console.warn('Failed to get analytics data from Supabase Edge Function, falling back to direct API calls:', error);
+      
+      try {
+        // Fallback to direct REST API calls (these have CORS enabled by default)
+        const daysAgo = dateRange === '1d' ? 1 : dateRange === '7d' ? 7 : 30;
+        const since = new Date(Date.now() - daysAgo * 24 * 60 * 60 * 1000).toISOString();
+
+        // Get events
+        const eventsResponse = await fetch(`${this.supabaseUrl}/rest/v1/events?timestamp=gte.${since}&order=timestamp.desc`, {
+          headers: {
+            'apikey': this.supabaseKey,
+            'Authorization': `Bearer ${this.supabaseKey}`
+          }
+        });
+
+        // Get form submissions
+        const submissionsResponse = await fetch(`${this.supabaseUrl}/rest/v1/form_submissions?submitted_at=gte.${since}&order=submitted_at.desc`, {
+          headers: {
+            'apikey': this.supabaseKey,
+            'Authorization': `Bearer ${this.supabaseKey}`
+          }
+        });
+
+        const events = eventsResponse.ok ? await eventsResponse.json() : [];
+        const submissions = submissionsResponse.ok ? await submissionsResponse.json() : [];
+
+        return { events, submissions, funnel: [], recentActivity: [] };
+        
+      } catch (fallbackError) {
+        console.warn('Direct API calls also failed, falling back to localStorage:', fallbackError);
+        return this.getLocalAnalyticsData();
+      }
     }
   }
 
