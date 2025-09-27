@@ -115,6 +115,9 @@
       position: relative;
       z-index: 10;
     }
+    
+    /* Hide Alpine.js elements before initialization */
+    [x-cloak] { display: none !important; }
   </style>
 </head>
 <body x-data="app" class="bg-gray-50">
@@ -496,7 +499,66 @@
 
   <!-- Page 4: Market Validation Dashboard -->
   <div x-show="currentPage === 'analytics'" class="min-h-screen bg-gray-50" x-data="analyticsDashboard()">
-    <div class="relative pt-10 pb-16">
+    
+    <!-- Apple-Style Password Protection Modal -->
+    <div x-show="showPasswordPrompt" class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 p-4" x-cloak>
+      <div class="bg-white/95 backdrop-blur-xl rounded-[24px] shadow-2xl border border-white/20 max-w-sm w-full">
+        <!-- Header -->
+        <div class="px-8 pt-8 pb-6 text-center">
+          <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h2 class="text-[22px] font-semibold text-black/90 mb-2 tracking-[-0.015em]">Analytics Dashboard</h2>
+          <p class="text-[15px] text-black/60 font-normal leading-[1.4] tracking-[-0.01em]">Enter your password to access<br>real-time performance data</p>
+        </div>
+        
+        <!-- Form -->
+        <div class="px-8 pb-8">
+          <form @submit.prevent="submitAnalyticsPassword()" class="space-y-5">
+            <div class="relative">
+              <input 
+                type="password" 
+                x-model="analyticsPassword"
+                placeholder="Password"
+                class="w-full px-4 py-4 bg-gray-50 border-0 rounded-[12px] text-[16px] focus:outline-none focus:ring-0 focus:bg-white focus:shadow-[0_0_0_1px_rgba(59,130,246,0.5)] transition-all duration-200 placeholder-black/40"
+                required
+                autocomplete="off"
+                x-ref="passwordInput"
+              >
+            </div>
+            
+            <div x-show="analyticsPasswordError" 
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 transform translate-y-1"
+                 x-transition:enter-end="opacity-100 transform translate-y-0"
+                 class="text-red-500 text-[14px] text-center font-medium" 
+                 x-text="analyticsPasswordError">
+            </div>
+            
+            <div class="flex gap-3 mt-6">
+              <button 
+                type="button"
+                @click="closePasswordPrompt()"
+                class="flex-1 py-3.5 text-[16px] font-medium text-blue-600 bg-transparent border-0 rounded-[12px] hover:bg-blue-50 transition-colors duration-200 active:scale-[0.98]"
+              >
+                Cancel
+              </button>
+              <button 
+                type="submit"
+                class="flex-1 py-3.5 text-[16px] font-semibold text-white bg-blue-600 border-0 rounded-[12px] hover:bg-blue-700 active:bg-blue-800 transition-all duration-200 active:scale-[0.98] shadow-sm"
+              >
+                Continue
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analytics Dashboard Content (only show when authenticated) -->
+    <div x-show="analyticsAccessGranted" class="relative pt-10 pb-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         
         <!-- Header -->
@@ -952,7 +1014,10 @@
         </div>
       </div>
     </div>
+    <!-- End of authenticated analytics content -->
+    
   </div>
+  <!-- End of analytics page -->
 
 </body>
 </html>

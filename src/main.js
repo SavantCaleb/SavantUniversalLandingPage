@@ -2876,6 +2876,12 @@ Alpine.data('app', () => {
     currentPage: (urlPage && ['landing', 'pricing', 'email-capture', 'analytics'].includes(urlPage)) ? urlPage : 'landing',
     currentVertical: (urlVertical && verticalData[urlVertical]) ? urlVertical : null,
     
+    // Analytics password protection
+    showPasswordPrompt: false,
+    analyticsPassword: '',
+    analyticsPasswordError: '',
+    analyticsAccessGranted: false,
+    
     init() {
       // Check URL for vertical and page parameters (redundant check for safety)
       const urlParams = new URLSearchParams(window.location.search);
@@ -2890,6 +2896,11 @@ Alpine.data('app', () => {
       
       if (page && ['landing', 'pricing', 'email-capture', 'analytics'].includes(page)) {
         this.currentPage = page;
+        
+        // Password protection for analytics page
+        if (page === 'analytics') {
+          this.checkAnalyticsAccess();
+        }
       }
     
     // Make current state globally available
@@ -3016,6 +3027,52 @@ Alpine.data('app', () => {
     // Optional: Clear form after submission
     this.formData = {};
     this.formStarted = false;
+  },
+
+  // Analytics password protection methods
+  checkAnalyticsAccess() {
+    // Check if password was already entered this session
+    const sessionAuth = sessionStorage.getItem('analytics_authenticated');
+    if (sessionAuth === 'true') {
+      this.analyticsAccessGranted = true;
+      return;
+    }
+    
+    // Show password prompt
+    this.showPasswordPrompt = true;
+    this.analyticsAccessGranted = false;
+    
+    // Auto-focus password input after modal appears
+    this.$nextTick(() => {
+      if (this.$refs.passwordInput) {
+        this.$refs.passwordInput.focus();
+      }
+    });
+  },
+
+  submitAnalyticsPassword() {
+    const correctPassword = import.meta.env.VITE_ANALYTICS_PASSWORD || 'SavantAnalytics2024!';
+    
+    if (this.analyticsPassword === correctPassword) {
+      this.analyticsAccessGranted = true;
+      this.showPasswordPrompt = false;
+      this.analyticsPasswordError = '';
+      
+      // Remember authentication for this session
+      sessionStorage.setItem('analytics_authenticated', 'true');
+    } else {
+      this.analyticsPasswordError = 'Incorrect password. Please try again.';
+      this.analyticsPassword = '';
+    }
+  },
+
+  closePasswordPrompt() {
+    this.showPasswordPrompt = false;
+    this.analyticsPassword = '';
+    this.analyticsPasswordError = '';
+    
+    // Redirect to home page if access denied
+    window.location.href = window.location.pathname;
   }
   };
 });
