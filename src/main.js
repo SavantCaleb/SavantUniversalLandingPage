@@ -33,7 +33,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Starter',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 200 calls/month',
             'Basic case qualification',
@@ -45,7 +45,7 @@ const verticalData = {
         },
         {
           name: 'Professional',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 500 calls/month',
@@ -59,7 +59,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -128,7 +128,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Pro',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Emergency call screening',
@@ -140,7 +140,7 @@ const verticalData = {
         },
         {
           name: 'Growth',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -154,7 +154,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -234,7 +234,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Essential',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic emergency screening',
@@ -246,7 +246,7 @@ const verticalData = {
         },
         {
           name: 'Professional',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -260,7 +260,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location dispatch',
@@ -339,7 +339,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Agent',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 500 inquiries/month',
             'Basic lead qualification',
@@ -351,7 +351,7 @@ const verticalData = {
         },
         {
           name: 'Team Leader',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 1,200 inquiries/month',
@@ -365,7 +365,7 @@ const verticalData = {
         },
         {
           name: 'Brokerage',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited inquiries',
             'Multi-office support',
@@ -445,7 +445,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Residential',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic emergency screening',
@@ -457,7 +457,7 @@ const verticalData = {
         },
         {
           name: 'Commercial',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -471,7 +471,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -550,7 +550,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Independent Agent',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 600 inquiries/month',
             'Basic qualification',
@@ -562,7 +562,7 @@ const verticalData = {
         },
         {
           name: 'Agency Team',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 1,500 inquiries/month',
@@ -576,7 +576,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Location',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited inquiries',
             'Multi-office coordination',
@@ -656,7 +656,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Practice',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic patient screening',
@@ -668,7 +668,7 @@ const verticalData = {
         },
         {
           name: 'Group Practice',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -682,7 +682,7 @@ const verticalData = {
         },
         {
           name: 'DSO/Multi-Location',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location scheduling',
@@ -762,7 +762,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Independent Shop',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic emergency response',
@@ -774,7 +774,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Bay Shop',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 700 calls/month',
@@ -788,7 +788,7 @@ const verticalData = {
         },
         {
           name: 'Chain/Franchise',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -868,7 +868,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Residential Focus',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic pest identification',
@@ -880,7 +880,7 @@ const verticalData = {
         },
         {
           name: 'Commercial Plus',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -894,7 +894,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Location',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-office coordination',
@@ -972,7 +972,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Small Clinic',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 500 calls/month',
             'Basic emergency assessment',
@@ -984,7 +984,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Vet Practice',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 1,000 calls/month',
@@ -998,7 +998,7 @@ const verticalData = {
         },
         {
           name: 'Emergency/Specialty',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             '24/7 emergency protocols',
@@ -1077,7 +1077,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Small Portfolio',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 200 units coverage',
             'Basic emergency screening',
@@ -1089,7 +1089,7 @@ const verticalData = {
         },
         {
           name: 'Growing Portfolio',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 500 units coverage',
@@ -1103,7 +1103,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise Portfolio',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited units coverage',
             'Multi-property coordination',
@@ -1183,7 +1183,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Crew',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic service scheduling',
@@ -1195,7 +1195,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Crew',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 700 calls/month',
@@ -1209,7 +1209,7 @@ const verticalData = {
         },
         {
           name: 'Franchise/Large',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location coordination',
@@ -1289,7 +1289,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Independent Broker',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 inquiries/month',
             'Basic pre-qualification',
@@ -1301,7 +1301,7 @@ const verticalData = {
         },
         {
           name: 'Team Leader',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 1,000 inquiries/month',
@@ -1315,7 +1315,7 @@ const verticalData = {
         },
         {
           name: 'Enterprise/Bank',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited inquiries',
             'Multi-branch support',
@@ -1389,7 +1389,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Small Contractor',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 200 inquiries/month',
             'Basic project qualification',
@@ -1401,7 +1401,7 @@ const verticalData = {
         },
         {
           name: 'Established Contractor',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 500 inquiries/month',
@@ -1415,7 +1415,7 @@ const verticalData = {
         },
         {
           name: 'Large Contractor',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited inquiries',
             'Multi-location support',
@@ -1495,7 +1495,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Practitioner',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic appointment scheduling',
@@ -1507,7 +1507,7 @@ const verticalData = {
         },
         {
           name: 'Small Firm',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 600 calls/month',
@@ -1521,7 +1521,7 @@ const verticalData = {
         },
         {
           name: 'Large Firm',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -1601,7 +1601,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo PT',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic insurance verification',
@@ -1613,7 +1613,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Therapist',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -1627,7 +1627,7 @@ const verticalData = {
         },
         {
           name: 'Clinic Network',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -1707,7 +1707,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Stylist',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic booking management',
@@ -1719,7 +1719,7 @@ const verticalData = {
         },
         {
           name: 'Full Salon',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 600 calls/month',
@@ -1733,7 +1733,7 @@ const verticalData = {
         },
         {
           name: 'Salon Chain',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location booking',
@@ -1813,7 +1813,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Boutique Studio',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic membership inquiries',
@@ -1825,7 +1825,7 @@ const verticalData = {
         },
         {
           name: 'Full Fitness Center',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -1839,7 +1839,7 @@ const verticalData = {
         },
         {
           name: 'Franchise Network',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location support',
@@ -1920,7 +1920,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Single Location',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 500 calls/month',
             'Basic triage protocols',
@@ -1932,7 +1932,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Provider',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 1000 calls/month',
@@ -1946,7 +1946,7 @@ const verticalData = {
         },
         {
           name: 'Healthcare Network',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location coordination',
@@ -2026,7 +2026,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Locksmith',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Emergency dispatch',
@@ -2038,7 +2038,7 @@ const verticalData = {
         },
         {
           name: 'Mobile Team',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 600 calls/month',
@@ -2052,7 +2052,7 @@ const verticalData = {
         },
         {
           name: 'Locksmith Company',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Enterprise dispatch system',
@@ -2132,7 +2132,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Private Practice',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 200 calls/month',
             'Basic intake processing',
@@ -2144,7 +2144,7 @@ const verticalData = {
         },
         {
           name: 'Group Practice',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 500 calls/month',
@@ -2158,7 +2158,7 @@ const verticalData = {
         },
         {
           name: 'Healthcare System',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Enterprise-grade security',
@@ -2239,7 +2239,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Solo Groomer',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic appointment booking',
@@ -2251,7 +2251,7 @@ const verticalData = {
         },
         {
           name: 'Grooming Salon',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 600 calls/month',
@@ -2265,7 +2265,7 @@ const verticalData = {
         },
         {
           name: 'Pet Care Center',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-service coordination',
@@ -2345,7 +2345,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Local Cleaner',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 400 calls/month',
             'Basic garment consultation',
@@ -2357,7 +2357,7 @@ const verticalData = {
         },
         {
           name: 'Full Service',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 800 calls/month',
@@ -2371,7 +2371,7 @@ const verticalData = {
         },
         {
           name: 'Multi-Location',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-store coordination',
@@ -2451,7 +2451,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Small Fleet',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 300 calls/month',
             'Basic inventory management',
@@ -2463,7 +2463,7 @@ const verticalData = {
         },
         {
           name: 'Full Rental Yard',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 600 calls/month',
@@ -2477,7 +2477,7 @@ const verticalData = {
         },
         {
           name: 'Rental Network',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location inventory',
@@ -2558,7 +2558,7 @@ const verticalData = {
       tiers: [
         {
           name: 'Small Facility',
-          price: '$147',
+          price: '$79',
           features: [
             'Up to 200 calls/month',
             'Basic unit management',
@@ -2570,7 +2570,7 @@ const verticalData = {
         },
         {
           name: 'Full Facility',
-          price: '$297',
+          price: '$149',
           featured: true,
           features: [
             'Up to 500 calls/month',
@@ -2584,7 +2584,7 @@ const verticalData = {
         },
         {
           name: 'Facility Network',
-          price: '$597',
+          price: '$299',
           features: [
             'Unlimited calls',
             'Multi-location management',
@@ -3237,7 +3237,7 @@ Alpine.data('analyticsDashboard', () => ({
       const formReaches = Math.max(0, tierClicks - uniqueFormStartIPs.size);
       
       // Calculate pricing tier distribution (only count latest selection per IP)
-      const tierDistribution = { '$147': 0, '$297': 0, '$597': 0 };
+      const tierDistribution = { '$79': 0, '$149': 0, '$299': 0 };
       const ipToLatestTier = new Map();
       
       // Get the latest tier selection for each IP
@@ -3256,13 +3256,13 @@ Alpine.data('analyticsDashboard', () => ({
       // Calculate average order value
       const totalTierClicks = tierClicks;
       const avgOrderValue = totalTierClicks > 0 ? 
-        ((tierDistribution['$147'] * 147) + (tierDistribution['$297'] * 297) + (tierDistribution['$597'] * 597)) / totalTierClicks 
-        : (formCompletions > 0 ? 297 : 0); // Use middle tier ($297) as default if forms completed but no tier clicks
+        ((tierDistribution['$79'] * 79) + (tierDistribution['$149'] * 149) + (tierDistribution['$299'] * 299)) / totalTierClicks 
+        : (formCompletions > 0 ? 149 : 0); // Use middle tier ($149) as default if forms completed but no tier clicks
       
       const conversionRate = uniqueVisitors > 0 ? (formCompletions / uniqueVisitors * 100) : 0;
       // Calculate average dollar amount from tier clicks (sum of clicks * price for all tiers / total clicks)
       const avgDollarFromClicks = totalTierClicks > 0 ? 
-        ((tierDistribution['$147'] * 147) + (tierDistribution['$297'] * 297) + (tierDistribution['$597'] * 597)) / totalTierClicks 
+        ((tierDistribution['$79'] * 79) + (tierDistribution['$149'] * 149) + (tierDistribution['$299'] * 299)) / totalTierClicks 
         : 0;
       const totalRevenue = formCompletions * avgOrderValue;
       
@@ -3357,15 +3357,15 @@ Alpine.data('analyticsDashboard', () => ({
       const total = ipToLatestTier.size;
       
       if (total > 0) {
-        const tierCounts = { '$147': 0, '$297': 0, '$597': 0 };
+        const tierCounts = { '$79': 0, '$149': 0, '$299': 0 };
         for (const tierPrice of ipToLatestTier.values()) {
           tierCounts[tierPrice] = (tierCounts[tierPrice] || 0) + 1;
         }
         
         validation[vertical] = {
-          '$147': Math.round((tierCounts['$147'] / total) * 100),
-          '$297': Math.round((tierCounts['$297'] / total) * 100),
-          '$597': Math.round((tierCounts['$597'] / total) * 100),
+          '$79': Math.round((tierCounts['$79'] / total) * 100),
+          '$149': Math.round((tierCounts['$149'] / total) * 100),
+          '$299': Math.round((tierCounts['$299'] / total) * 100),
           total
         };
       }

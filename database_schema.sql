@@ -69,7 +69,7 @@ CREATE TABLE events (
     
     -- Pricing specific  
     tier_name TEXT, -- Solo Pro, Growth, Enterprise
-    tier_price TEXT, -- $147, $297, $597
+    tier_price TEXT, -- $79, $149, $299
     
     -- Form specific
     form_field_name TEXT,
@@ -186,9 +186,9 @@ CREATE TABLE vertical_performance (
     form_abandonment_rate DECIMAL(5,2) DEFAULT 0,
     
     -- Pricing tier distribution
-    tier_147_selections INTEGER DEFAULT 0,
-    tier_297_selections INTEGER DEFAULT 0, 
-    tier_597_selections INTEGER DEFAULT 0,
+    tier_79_selections INTEGER DEFAULT 0,
+    tier_149_selections INTEGER DEFAULT 0, 
+    tier_299_selections INTEGER DEFAULT 0,
     
     -- Revenue estimation
     estimated_revenue DECIMAL(10,2) DEFAULT 0,

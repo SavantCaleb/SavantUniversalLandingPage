@@ -31,7 +31,7 @@ gtag('config', 'G-XXXXXXXXXX');
 ### **Automatic Events:**
 1. **`page_view`** - Every page load with vertical/UTM data
 2. **`pricing_button_click`** - CTA button clicks from landing page
-3. **`pricing_tier_click`** - Which pricing tier ($147/$297/$597)
+3. **`pricing_tier_click`** - Which pricing tier ($79/$149/$299)
 4. **`email_form_start`** - User starts filling email form
 5. **`email_form_complete`** - Form submission success
 6. **`conversion_complete`** - Final conversion event
