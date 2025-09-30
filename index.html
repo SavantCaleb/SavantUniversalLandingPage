@@ -739,50 +739,50 @@
                   </template>
                 </div>
                 
-                <!-- $147 Row -->
+                <!-- $79 Row -->
                 <div class="grid gap-1 mb-1" :style="'grid-template-columns: 60px repeat(' + Object.keys(pricingValidation || {}).filter(v => pricingValidation[v]?.total > 0).length + ', 1fr)'">
-                  <div class="text-[12px] font-medium text-blue-700 p-2 text-right">$147</div>
+                  <div class="text-[12px] font-medium text-blue-700 p-2 text-right">$79</div>
                   <template x-for="([vertical, validation]) in Object.entries(pricingValidation || {})" :key="vertical">
                     <div x-show="validation.total > 0" 
                          class="h-12 rounded flex items-center justify-center text-[11px] font-semibold transition-all duration-200"
-                         :class="validation['$147'] >= 75 ? 'bg-blue-600 text-white' : 
-                                validation['$147'] >= 50 ? 'bg-blue-400 text-white' : 
-                                validation['$147'] >= 25 ? 'bg-blue-200 text-blue-800' : 
-                                validation['$147'] > 0 ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'"
-                         :title="vertical.replace('-', ' ') + ': ' + validation['$147'] + '% chose $147'"
-                         x-text="validation['$147'] + '%'">
+                         :class="validation['$79'] >= 75 ? 'bg-blue-600 text-white' : 
+                                validation['$79'] >= 50 ? 'bg-blue-400 text-white' : 
+                                validation['$79'] >= 25 ? 'bg-blue-200 text-blue-800' : 
+                                validation['$79'] > 0 ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'"
+                         :title="vertical.replace('-', ' ') + ': ' + validation['$79'] + '% chose $79'"
+                         x-text="validation['$79'] + '%'">
                     </div>
                   </template>
                 </div>
                 
-                <!-- $297 Row -->
+                <!-- $149 Row -->
                 <div class="grid gap-1 mb-1" :style="'grid-template-columns: 60px repeat(' + Object.keys(pricingValidation || {}).filter(v => pricingValidation[v]?.total > 0).length + ', 1fr)'">
-                  <div class="text-[12px] font-medium text-purple-700 p-2 text-right">$297</div>
+                  <div class="text-[12px] font-medium text-purple-700 p-2 text-right">$149</div>
                   <template x-for="([vertical, validation]) in Object.entries(pricingValidation || {})" :key="vertical">
                     <div x-show="validation.total > 0" 
                          class="h-12 rounded flex items-center justify-center text-[11px] font-semibold transition-all duration-200"
-                         :class="validation['$297'] >= 75 ? 'bg-purple-600 text-white' : 
-                                validation['$297'] >= 50 ? 'bg-purple-400 text-white' : 
-                                validation['$297'] >= 25 ? 'bg-purple-200 text-purple-800' : 
-                                validation['$297'] > 0 ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-500'"
-                         :title="vertical.replace('-', ' ') + ': ' + validation['$297'] + '% chose $297'"
-                         x-text="validation['$297'] + '%'">
+                         :class="validation['$149'] >= 75 ? 'bg-purple-600 text-white' : 
+                                validation['$149'] >= 50 ? 'bg-purple-400 text-white' : 
+                                validation['$149'] >= 25 ? 'bg-purple-200 text-purple-800' : 
+                                validation['$149'] > 0 ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-500'"
+                         :title="vertical.replace('-', ' ') + ': ' + validation['$149'] + '% chose $149'"
+                         x-text="validation['$149'] + '%'">
                     </div>
                   </template>
                 </div>
                 
-                <!-- $597 Row -->
+                <!-- $299 Row -->
                 <div class="grid gap-1" :style="'grid-template-columns: 60px repeat(' + Object.keys(pricingValidation || {}).filter(v => pricingValidation[v]?.total > 0).length + ', 1fr)'">
-                  <div class="text-[12px] font-medium text-green-700 p-2 text-right">$597</div>
+                  <div class="text-[12px] font-medium text-green-700 p-2 text-right">$299</div>
                   <template x-for="([vertical, validation]) in Object.entries(pricingValidation || {})" :key="vertical">
                     <div x-show="validation.total > 0" 
                          class="h-12 rounded flex items-center justify-center text-[11px] font-semibold transition-all duration-200"
-                         :class="validation['$597'] >= 75 ? 'bg-green-600 text-white' : 
-                                validation['$597'] >= 50 ? 'bg-green-400 text-white' : 
-                                validation['$597'] >= 25 ? 'bg-green-200 text-green-800' : 
-                                validation['$597'] > 0 ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'"
-                         :title="vertical.replace('-', ' ') + ': ' + validation['$597'] + '% chose $597'"
-                         x-text="validation['$597'] + '%'">
+                         :class="validation['$299'] >= 75 ? 'bg-green-600 text-white' : 
+                                validation['$299'] >= 50 ? 'bg-green-400 text-white' : 
+                                validation['$299'] >= 25 ? 'bg-green-200 text-green-800' : 
+                                validation['$299'] > 0 ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'"
+                         :title="vertical.replace('-', ' ') + ': ' + validation['$299'] + '% chose $299'"
+                         x-text="validation['$299'] + '%'">
                     </div>
                   </template>
                 </div>
@@ -949,8 +949,48 @@
           <div class="bg-white rounded-[18px] p-6 shadow-sm border border-black/[0.08]">
             <h3 class="text-[22px] font-semibold tracking-tight text-black mb-6">📈 Recent Activity</h3>
             <div class="text-[14px] text-black/60 mb-4">What's happening now: Real-time event monitoring</div>
+            
+            <!-- Filters -->
+            <div class="flex gap-3 mb-4">
+              <select x-model="activityEventFilter" class="px-3 py-2 border border-black/[0.12] rounded-xl text-[14px] font-normal">
+                <option value="">All Events</option>
+                <option value="page_view">Page Views</option>
+                <option value="pricing_button_click">Pricing Clicks</option>
+                <option value="pricing_tier_click">Tier Clicks</option>
+                <option value="email_form_start">Form Starts</option>
+                <option value="email_form_field">Form Fields</option>
+                <option value="email_form_complete">Form Completions</option>
+              </select>
+              
+              <select x-model="activityVerticalFilter" class="px-3 py-2 border border-black/[0.12] rounded-xl text-[14px] font-normal">
+                <option value="">All Verticals</option>
+                <template x-for="vertical in ['personal-injury', 'hvac', 'plumbing', 'real-estate', 'electrical', 'insurance', 'dental', 'auto-repair', 'pest-control', 'veterinary', 'property-management', 'lawn-care', 'mortgage-broker', 'general-contractors', 'accounting', 'physical-therapy', 'hair-salons', 'fitness-studios', 'urgent-care', 'locksmith', 'mental-health', 'pet-grooming', 'dry-cleaning', 'equipment-rental', 'storage-facilities']" :key="vertical">
+                  <option :value="vertical" x-text="vertical.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())"></option>
+                </template>
+              </select>
+              
+              <input type="text" x-model="activitySearchFilter" placeholder="Search..." class="px-3 py-2 border border-black/[0.12] rounded-xl text-[14px] font-normal flex-1">
+              
+              <button @click="activityEventFilter = ''; activityVerticalFilter = ''; activitySearchFilter = ''" 
+                      x-show="activityEventFilter || activityVerticalFilter || activitySearchFilter"
+                      class="px-3 py-2 text-[14px] text-blue-600 hover:bg-blue-50 rounded-xl transition-colors">
+                Clear
+              </button>
+            </div>
+            
             <div class="space-y-3 max-h-80 overflow-y-auto">
-              <template x-for="(event, index) in events.slice(-15).reverse()" :key="index">
+              <template x-for="(event, index) in events.slice(0, 100).filter(e => {
+                if (activityEventFilter && e.event !== activityEventFilter) return false;
+                if (activityVerticalFilter && e.data.vertical !== activityVerticalFilter) return false;
+                if (activitySearchFilter) {
+                  const search = activitySearchFilter.toLowerCase();
+                  const eventText = e.event.toLowerCase();
+                  const verticalText = (e.data.vertical || '').toLowerCase();
+                  const tierText = (e.data.tier_price || '').toLowerCase();
+                  if (!eventText.includes(search) && !verticalText.includes(search) && !tierText.includes(search)) return false;
+                }
+                return true;
+              })" :key="index">
                 <div class="flex items-center justify-between p-3 bg-black/[0.02] rounded-xl">
                   <div class="flex items-center gap-3">
                     <span class="text-[14px] font-medium text-black capitalize" x-text="event.event.replace('_', ' ')"></span>
@@ -973,7 +1013,7 @@
             <div class="grid sm:grid-cols-3 gap-4">
               <div>
                 <label class="block text-[14px] font-medium text-black/80 mb-2">Date Range</label>
-                <select x-model="dateRange" @change="calculateStats()" class="w-full px-4 py-2 border border-black/[0.12] rounded-xl text-[16px] font-normal">
+                <select x-model="dateRange" @change="finalizeStats()" class="w-full px-4 py-2 border border-black/[0.12] rounded-xl text-[16px] font-normal">
                   <option value="1d">Last 24 hours</option>
                   <option value="7d">Last 7 days</option>
                   <option value="30d">Last 30 days</option>

@@ -442,8 +442,10 @@ class SupabaseAnalytics {
       return { 
         events: data.events || [], 
         submissions: data.submissions || [], 
-        funnel: data.funnel || [],
-        recentActivity: data.recentActivity || []
+        funnel: data.funnel || [], 
+        recentActivity: data.recentActivity || [],
+        verticalStats: data.verticalStats || {},
+        pricingValidation: data.pricingValidation || {}
       };
       
     } catch (error) {

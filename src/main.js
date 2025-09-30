@@ -3088,6 +3088,11 @@ Alpine.data('analyticsDashboard', () => ({
   dateRange: '7d',
   showResetModal: false,
   
+  // Activity filters
+  activityEventFilter: '',
+  activityVerticalFilter: '',
+  activitySearchFilter: '',
+  
   // Total number of businesses per vertical in the US
   businessCounts: {
     'personal-injury': 45000,
@@ -3126,28 +3131,34 @@ Alpine.data('analyticsDashboard', () => ({
     try {
       if (window.SupabaseAnalytics) {
         console.log('Loading analytics data from Supabase...');
-        // Get data from Supabase
         const analyticsData = await window.SupabaseAnalytics.getAnalyticsData(this.dateRange);
         console.log('Supabase analytics data:', analyticsData);
-        
+
         this.events = this.formatEventsForLocalCompatibility(analyticsData.events || []);
         this.formSubmissions = analyticsData.submissions || [];
-        
+        this.verticalStats = analyticsData.verticalStats || {};
+        this.pricingValidation = analyticsData.pricingValidation || {};
+        this.eventsSource = 'supabase';
+
         console.log('Formatted events:', this.events.length);
         console.log('Form submissions:', this.formSubmissions.length);
       } else {
         console.log('SupabaseAnalytics not available, using localStorage');
-        // Fallback to localStorage
         this.events = Analytics.getEvents() || [];
         this.formSubmissions = Analytics.getFormSubmissions() || [];
+        this.verticalStats = this.calculateVerticalStats(this.events);
+        this.pricingValidation = this.calculatePricingValidation(this.events);
+        this.eventsSource = 'local';
       }
-      this.calculateStats();
+      this.finalizeStats();
     } catch (error) {
       console.error('Failed to load analytics data:', error);
-      // Fallback to localStorage on error
       this.events = Analytics.getEvents() || [];
       this.formSubmissions = Analytics.getFormSubmissions() || [];
-      this.calculateStats();
+      this.verticalStats = this.calculateVerticalStats(this.events);
+      this.pricingValidation = this.calculatePricingValidation(this.events);
+      this.eventsSource = 'local';
+      this.finalizeStats();
     }
   },
   
@@ -3169,7 +3180,7 @@ Alpine.data('analyticsDashboard', () => ({
     }));
   },
   
-  calculateStats() {
+  finalizeStats() {
     const now = new Date();
     const cutoffDate = new Date();
     
@@ -3186,17 +3197,23 @@ Alpine.data('analyticsDashboard', () => ({
       const eventDate = new Date(e.data.timestamp);
       return eventDate >= cutoffDate;
     });
-    
-    // Calculate comprehensive market validation stats
-    this.verticalStats = this.calculateVerticalStats(filteredEvents);
+    const recalculatedStats = this.calculateVerticalStats(filteredEvents);
+    const recalculatedPricingValidation = this.calculatePricingValidation(filteredEvents);
+
+    // Merge Supabase stats (authoritative) with recalculated defaults if needed
+    if (this.eventsSource === 'supabase' && this.verticalStats && Object.keys(this.verticalStats).length > 0) {
+      this.verticalStats = mergeStats(this.verticalStats, recalculatedStats);
+      this.pricingValidation = mergePricingValidation(this.pricingValidation, recalculatedPricingValidation);
+    } else {
+      this.verticalStats = recalculatedStats;
+      this.pricingValidation = recalculatedPricingValidation;
+    }
     this.winningVertical = this.getWinningVertical();
     
     // Set selectedVertical to winning vertical if not already set, or if winning vertical changed
     if (!this.selectedVertical || (this.winningVertical && this.selectedVertical.vertical !== this.winningVertical.vertical)) {
       this.selectedVertical = this.winningVertical;
     }
-    
-    this.pricingValidation = this.calculatePricingValidation(filteredEvents);
   },
   
   calculateVerticalStats(events) {
@@ -3296,8 +3313,7 @@ Alpine.data('analyticsDashboard', () => ({
         completionRate: tierClicks > 0 ? (formCompletions / tierClicks * 100).toFixed(1) : 0,
         tierDistribution,
         isSignificant,
-        sampleNeeded,
-        uniqueIPs: Array.from(uniqueVisitorIPs) // For debugging
+        sampleNeeded
       };
     });
     
@@ -3441,7 +3457,34 @@ Alpine.data('analyticsDashboard', () => ({
     
     return Object.entries(this.verticalStats)
       .filter(([vertical, stats]) => stats.pageViews > 0)
-      .sort(([,a], [,b]) => parseFloat(b.expectedRevenue500) - parseFloat(a.expectedRevenue500));
+      .sort(([verticalA, a], [verticalB, b]) => {
+        // Primary sort: Expected Revenue (dollar amount)
+        const revenueDiff = parseFloat(b.expectedRevenue500) - parseFloat(a.expectedRevenue500);
+        if (revenueDiff !== 0) return revenueDiff;
+        
+        // Tiebreaker 1: Conversion Rate
+        const convRateDiff = parseFloat(b.conversionRate) - parseFloat(a.conversionRate);
+        if (convRateDiff !== 0) return convRateDiff;
+        
+        // Tiebreaker 2: Completed (form completions)
+        const completedDiff = b.formCompletions - a.formCompletions;
+        if (completedDiff !== 0) return completedDiff;
+        
+        // Tiebreaker 3: To Trial (tier clicks)
+        const trialDiff = b.tierClicks - a.tierClicks;
+        if (trialDiff !== 0) return trialDiff;
+        
+        // Tiebreaker 4: To Pricing (pricing clicks)
+        const pricingDiff = b.pricingClicks - a.pricingClicks;
+        if (pricingDiff !== 0) return pricingDiff;
+        
+        // Tiebreaker 5: Visitors (page views)
+        const visitorsDiff = b.pageViews - a.pageViews;
+        if (visitorsDiff !== 0) return visitorsDiff;
+        
+        // Final tiebreaker: Alphabetical
+        return verticalA.localeCompare(verticalB);
+      });
   },
 
   getPricingInsight(vertical, validation) {
@@ -3603,7 +3646,7 @@ Alpine.data('analyticsDashboard', () => ({
       console.log('Analytics data has been reset successfully');
       
       // Recalculate with empty data
-      this.calculateStats();
+      this.finalizeStats();
       
     } catch (error) {
       console.error('Error resetting analytics data:', error);
@@ -3613,3 +3656,48 @@ Alpine.data('analyticsDashboard', () => ({
 
 // Start Alpine
 Alpine.start();
+
+function mergeStats(serverStats, recalculatedStats) {
+  if (!serverStats || Object.keys(serverStats).length === 0) return recalculatedStats;
+  if (!recalculatedStats || Object.keys(recalculatedStats).length === 0) return serverStats;
+
+  const merged = { ...serverStats };
+
+  Object.entries(recalculatedStats).forEach(([vertical, stats]) => {
+    if (!merged[vertical]) {
+      merged[vertical] = stats;
+      return;
+    }
+
+    const authoritative = merged[vertical];
+
+    merged[vertical] = {
+      ...stats,
+      pageViews: authoritative.pageViews,
+      totalPageViews: authoritative.totalPageViews,
+      pricingClicks: authoritative.pricingClicks,
+      tierClicks: authoritative.tierClicks,
+      formCompletions: authoritative.formCompletions,
+      expectedRevenue500: authoritative.expectedRevenue500,
+      mrrPer1000: authoritative.mrrPer1000
+    };
+  });
+
+  return merged;
+}
+
+function mergePricingValidation(serverValidation, recalculatedValidation) {
+  if (!serverValidation || Object.keys(serverValidation).length === 0) return recalculatedValidation;
+  if (!recalculatedValidation || Object.keys(recalculatedValidation).length === 0) return serverValidation;
+
+  const merged = { ...serverValidation };
+
+  Object.entries(recalculatedValidation).forEach(([vertical, validation]) => {
+    merged[vertical] = {
+      ...(serverValidation[vertical] || {}),
+      ...validation
+    };
+  });
+
+  return merged;
+}
