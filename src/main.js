@@ -2881,6 +2881,11 @@ Alpine.data('app', () => {
     analyticsPassword: '',
     analyticsPasswordError: '',
     analyticsAccessGranted: false,
+    pageLoadTimestamp: null,
+    pageExitTracked: false,
+    pageHiddenTimestamp: null,
+    pageTimingListenersAdded: false,
+    historyListenersAdded: false,
     
     init() {
       // Check URL for vertical and page parameters (redundant check for safety)
@@ -2917,10 +2922,22 @@ Alpine.data('app', () => {
         referrer: document.referrer
       });
     }
+
+    this.resetPageTimingState();
+    this.setupPageTimingListeners();
+    this.setupHistoryListener();
   },
   
   goToPage(page, tierData = null) {
     const previousPage = this.currentPage;
+
+    if (this.currentVertical && this.pageLoadTimestamp !== null) {
+      this.trackPageDuration({
+        reason: 'navigation',
+        next_page: page,
+        previous_page: previousPage
+      });
+    }
     this.currentPage = page;
     window.currentPage = page;
     
@@ -2954,6 +2971,144 @@ Alpine.data('app', () => {
         previous_page: previousPage
       });
     }
+
+    this.resetPageTimingState();
+  },
+
+  setupPageTimingListeners() {
+    if (this.pageTimingListenersAdded) {
+      return;
+    }
+
+    const handleExit = (extraData = {}) => {
+      this.trackPageDuration(extraData);
+    };
+
+    const visibilityHandler = () => {
+      if (document.visibilityState === 'hidden') {
+        this.pageHiddenTimestamp = Date.now();
+        handleExit({ reason: 'tab_hidden' });
+      } else if (document.visibilityState === 'visible') {
+        if (this.pageHiddenTimestamp) {
+          const timeHiddenMs = Date.now() - this.pageHiddenTimestamp;
+          const timeHiddenSeconds = Math.max(0, Math.round(timeHiddenMs / 1000));
+          this.pageHiddenTimestamp = null;
+
+          if (this.currentVertical && this.pageLoadTimestamp !== null) {
+            Analytics.track('page_resume', {
+              vertical: this.currentVertical,
+              page: this.currentPage,
+              time_hidden_seconds: timeHiddenSeconds
+            });
+          }
+        }
+
+        this.resetPageTimingState();
+      }
+    };
+
+    const beforeUnloadHandler = () => {
+      handleExit({ reason: 'before_unload' });
+    };
+
+    const pageHideHandler = () => {
+      handleExit({ reason: 'page_hide' });
+      if (!document.hidden) {
+        this.resetPageTimingState();
+      }
+    };
+
+    document.addEventListener('visibilitychange', visibilityHandler);
+    window.addEventListener('beforeunload', beforeUnloadHandler);
+    window.addEventListener('pagehide', pageHideHandler);
+
+    this.pageTimingListenersAdded = true;
+
+    this.$watch('currentPage', () => {
+      this.resetPageTimingState();
+    });
+
+    this._cleanupPageTimingListeners = () => {
+      document.removeEventListener('visibilitychange', visibilityHandler);
+      window.removeEventListener('beforeunload', beforeUnloadHandler);
+      window.removeEventListener('pagehide', pageHideHandler);
+      this.pageTimingListenersAdded = false;
+    };
+  },
+
+  trackPageDuration(extraData = {}) {
+    if (!this.currentVertical || this.pageLoadTimestamp === null) {
+      return;
+    }
+
+    if (this.pageExitTracked) {
+      return;
+    }
+
+    const timeOnPageMs = Date.now() - this.pageLoadTimestamp;
+    const timeOnPageSeconds = Math.max(0, Math.round(timeOnPageMs / 1000));
+
+    this.pageExitTracked = true;
+
+    Analytics.track('page_exit', {
+      vertical: this.currentVertical,
+      page: this.currentPage,
+      time_on_page_seconds: timeOnPageSeconds,
+      ...extraData
+    });
+  },
+
+  resetPageTimingState() {
+    this.pageLoadTimestamp = Date.now();
+    this.pageExitTracked = false;
+    this.pageHiddenTimestamp = null;
+  },
+
+  setupHistoryListener() {
+    if (this.historyListenersAdded) {
+      return;
+    }
+
+    window.addEventListener('popstate', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const page = urlParams.get('page');
+      const vertical = urlParams.get('vertical');
+
+      if (vertical && verticalData[vertical]) {
+        this.currentVertical = vertical;
+        window.currentVertical = vertical;
+      }
+
+      const validPages = ['landing', 'pricing', 'email-capture', 'analytics'];
+      const targetPage = page && validPages.includes(page) ? page : 'landing';
+
+      if (targetPage !== this.currentPage) {
+        const previousPage = this.currentPage;
+        this.currentPage = targetPage;
+        window.currentPage = targetPage;
+
+        if (targetPage === 'analytics') {
+          this.checkAnalyticsAccess();
+        } else {
+          this.showPasswordPrompt = false;
+          this.analyticsAccessGranted = false;
+        }
+
+        // Track page view for restored page if vertical is known
+        if (this.currentVertical) {
+          Analytics.track('page_view', {
+            page: this.currentPage,
+            vertical: this.currentVertical,
+            previous_page: previousPage,
+            navigation_type: 'history'
+          });
+        }
+
+        this.resetPageTimingState();
+      }
+    });
+
+    this.historyListenersAdded = true;
   },
   
   get verticalData() {
