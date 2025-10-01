@@ -7,26 +7,26 @@ window.Alpine = Alpine;
 const verticalData = {
   'personal-injury': {
     brand: 'LegalCallAI',
-    headline: 'Never Miss Another High-Value Case Again',
-    subheading: 'Our AI voice assistant handles after-hours calls, qualifies leads instantly, and captures case details while you sleep—turning missed calls into $25K+ cases.',
+    headline: 'Never Miss Another Case Again',
+    subheading: 'Our AI answers 24/7, captures injury details and contact info, and sends you complete intake reports—so you can focus on winning cases, not answering midnight calls.',
     features: [
       {
         icon: '⚡',
-        title: '24/7 Emergency Intake',
-        description: 'Captures accident details, injuries, and contact information from potential clients calling at 2 AM, weekends, or holidays when your staff isn\'t available.'
+        title: '24/7 Case Intake',
+        description: 'Answers calls after-hours and weekends, asks "What happened in the accident?", "Were you injured?", "When did this occur?", and captures detailed responses for your review.'
       },
       {
         icon: '🎯',
-        title: 'Instant Case Qualification',
-        description: 'Pre-screens calls using your criteria—accident type, injury severity, liability assessment—so you only spend time on cases worth pursuing.'
+        title: 'Accident Documentation',
+        description: 'Discusses injury severity, accident circumstances, and other party information to build preliminary case profiles while victims are still motivated to hire representation.'
       },
       {
         icon: '📋',
-        title: 'Detailed Case Documentation',
-        description: 'Automatically generates comprehensive intake reports with caller information, accident details, and preliminary case assessment—delivered to your CRM within minutes.'
+        title: 'Instant Attorney Notification',
+        description: 'Sends you text and email summaries with caller details, accident type, injury description, and urgency level—so you can follow up on serious cases immediately.'
       }
     ],
-    socialProof: 'Join 150+ personal injury firms already using AI to capture more cases and increase revenue by an average of $500K annually.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Simple, Transparent Pricing',
       subheading: 'Select the plan that fits your firm\'s size and call volume',
@@ -102,26 +102,26 @@ const verticalData = {
   
   'hvac': {
     brand: 'HVACAssistAI',
-    headline: 'Handle Peak Season Rush Without Adding Staff',
-    subheading: 'Our AI handles emergency calls, schedules appointments, and qualifies jobs 24/7—so you never miss a $1,200 service call again, even during your busiest months.',
+    headline: 'Never Miss Another Job Again',
+    subheading: 'Our AI answers while you\'re on-site, diagnoses heating/cooling issues, and schedules appointments by urgency—so you can finish the job you\'re on without missing the next one.',
     features: [
       {
         icon: '❄️',
-        title: 'Peak Season Call Management',
-        description: 'Automatically handles the surge in emergency repair calls during heat waves and cold snaps when your phones are ringing non-stop and every call is urgent.'
+        title: 'Emergency Call Screening',
+        description: 'Answers immediately, asks "Is your heating or cooling not working?", "When did it stop?", "Is anyone uncomfortable?", and determines if it\'s an emergency or routine service.'
       },
       {
         icon: '⚡',
-        title: 'Emergency Response Triage',
-        description: 'Intelligently prioritizes calls by urgency—elderly customers without heat, commercial buildings down, versus routine maintenance—routing critical issues directly to your emergency line.'
+        title: 'Service Appointment Booking',
+        description: 'Checks your calendar availability, offers appointment times, books the service call, and captures the address and problem description for your technicians.'
       },
       {
         icon: '📅',
-        title: 'Smart Appointment Scheduling',
-        description: 'Automatically books appointments based on your availability, service type, and location—preventing the back-and-forth that loses customers to faster competitors.'
+        title: 'Pricing & Quote Questions',
+        description: 'Answers common questions about service call costs, maintenance pricing, and system replacement estimates based on your standard pricing structure.'
       }
     ],
-    socialProof: 'Trusted by 200+ HVAC contractors who\'ve reduced missed calls by 95% and increased booking rates by 60% during peak season.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Plans That Scale With Your Business',
       subheading: 'From solo contractors to multi-truck operations',
@@ -208,26 +208,26 @@ const verticalData = {
 
   'plumbing': {
     brand: 'PlumbingCallAI',
-    headline: 'Never Miss Another Emergency Plumbing Call',
-    subheading: 'Our AI handles urgent calls 24/7, dispatches your on-call plumber instantly, and captures every $800+ emergency job—even at 3 AM on weekends.',
+    headline: 'Never Miss Another Job Again',
+    subheading: 'Our AI triages plumbing problems, dispatches for emergencies, and books routine appointments—so you can focus on fixing pipes, not juggling phone calls.',
     features: [
       {
         icon: '🚨',
-        title: '24/7 Emergency Dispatch',
-        description: 'Instantly identifies burst pipes, flooding, and sewer backups, immediately connecting customers with your on-call plumber while capturing job details.'
+        title: 'Emergency vs. Routine Triage',
+        description: 'Answers every call, asks "What\'s the plumbing issue?", "Is there water damage?", "Has the water been shut off?", and immediately routes true emergencies to your on-call tech.'
       },
       {
         icon: '💧',
-        title: 'Smart Urgency Assessment',
-        description: 'Distinguishes between true emergencies requiring immediate response and jobs that can wait until morning, optimizing your after-hours costs.'
+        title: 'Service Call Booking',
+        description: 'Schedules non-emergency appointments, captures property details and access instructions, explains your service call fees, and confirms the booking via text.'
       },
       {
         icon: '📱',
-        title: 'Real-Time Tech Notification',
-        description: 'Automatically texts your on-call plumber with customer details, location, problem type, and access instructions—no missed connections.'
+        title: 'After-Hours Dispatch',
+        description: 'Handles late-night burst pipes and flooding emergencies by immediately notifying your on-call plumber with the address, problem type, and customer contact info.'
       }
     ],
-    socialProof: 'Used by 180+ plumbing companies to capture 40% more emergency calls and reduce response time by half.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Emergency-Ready Pricing Plans',
       subheading: 'Choose the coverage that protects your revenue',
@@ -313,26 +313,26 @@ const verticalData = {
 
   'real-estate': {
     brand: 'RealtyCallAI',
-    headline: 'Convert More Leads While You Sleep',
-    subheading: 'Our AI captures buyer inquiries 24/7, qualifies prospects instantly, and books showing appointments—so you never lose a $12K commission to a faster agent again.',
+    headline: 'Never Miss Another Lead Again',
+    subheading: 'Our AI answers property questions, captures buyer interest, and books showing appointments—so you can focus on closing deals, not playing phone tag.',
     features: [
       {
         icon: '🏠',
-        title: 'Instant Lead Qualification',
-        description: 'Pre-qualifies prospects by budget, timeline, and mortgage pre-approval status within the first 60 seconds of their call.'
+        title: 'Property Inquiry Handling',
+        description: 'Answers calls about listings, asks "Which property are you calling about?", "What interests you about it?", provides basic information like price and bedrooms, and qualifies their timeline.'
       },
       {
         icon: '📅',
-        title: 'Smart Showing Coordination',
-        description: 'Automatically schedules property showings based on your availability and property access, sending confirmations to both parties.'
+        title: 'Showing Coordination',
+        description: 'Books property showings by checking your calendar, offering available times, confirming the appointment, and sending address and showing instructions to both parties.'
       },
       {
         icon: '🚀',
-        title: 'Speed-to-Lead Champion',
-        description: 'Responds to all inquiries within 30 seconds, giving you the critical first-mover advantage in today\'s competitive market.'
+        title: 'Lead Qualification',
+        description: 'Asks about pre-approval status, desired move-in timeline, and must-have features to help you prioritize which leads to follow up with first.'
       }
     ],
-    socialProof: '350+ real estate professionals using AI to increase conversion rates by 45% and close 3+ additional deals per month.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Plans Built for Real Estate Success',
       subheading: 'Scale your lead response without adding staff',
@@ -419,26 +419,26 @@ const verticalData = {
 
   'electrical': {
     brand: 'ElectricCallAI',
-    headline: 'Never Miss Another Safety-Critical Emergency',
-    subheading: 'Our AI handles electrical emergency calls 24/7, assesses danger levels instantly, and dispatches your electricians to high-priority jobs—protecting lives and capturing every $1,100+ service call.',
+    headline: 'Never Miss Another Job Again',
+    subheading: 'Our AI assesses electrical problems, dispatches for emergencies, and schedules service calls—so you can safely complete the job at hand.',
     features: [
       {
         icon: '⚡',
-        title: 'Safety-First Call Screening',
-        description: 'Immediately identifies electrical hazards like sparking outlets, burning smells, or power outages, prioritizing dangerous situations for instant response.'
+        title: 'Safety Emergency Assessment',
+        description: 'Answers immediately, asks "Is anything sparking or smoking?", "Do you smell burning?", "Has the power been shut off?", and escalates dangerous situations to your emergency line.'
       },
       {
         icon: '🚨',
-        title: 'Emergency Priority Routing',
-        description: 'Automatically escalates life-threatening electrical issues to your emergency line while scheduling routine work for normal business hours.'
+        title: 'Service Call Scheduling',
+        description: 'Books non-emergency electrical work, captures details about outlets, breakers, or wiring issues, provides estimated service call costs, and confirms appointments.'
       },
       {
         icon: '📋',
-        title: 'Code Compliance Documentation',
-        description: 'Captures detailed information about electrical problems and building codes to help your techs arrive fully prepared with the right permits and materials.'
+        title: 'Code & Permit Questions',
+        description: 'Answers common questions about electrical permits, inspection requirements, and building code compliance based on your area\'s regulations.'
       }
     ],
-    socialProof: 'Trusted by 160+ electrical contractors to reduce emergency response time by 65% and capture 35% more after-hours revenue.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Electrical Emergency Coverage Plans',
       subheading: 'Protect your customers and your revenue 24/7',
@@ -524,26 +524,26 @@ const verticalData = {
 
   'insurance': {
     brand: 'InsureCallAI',
-    headline: 'Win More Quotes By Responding Faster',
-    subheading: 'Our AI captures insurance inquiries instantly, qualifies prospects by coverage type, and delivers warm leads to your agents—helping you win more quotes in today\'s speed-obsessed market.',
+    headline: 'Never Miss Another Quote Again',
+    subheading: 'Our AI calls leads in 60 seconds, captures coverage needs, and schedules quote consultations—so you win the speed game while in meetings.',
     features: [
       {
         icon: '🏃',
-        title: 'Lightning-Fast Quote Response',
-        description: 'Responds to insurance inquiries within 15 seconds, gathering essential information while prospects are still motivated to buy.'
+        title: 'Instant Lead Response',
+        description: 'Calls back web inquiries within 60 seconds, asks "What type of insurance are you shopping for?", "What coverage do you currently have?", and captures policy details while they\'re actively comparing quotes.'
       },
       {
         icon: '🎯',
-        title: 'Smart Coverage Qualification',
-        description: 'Pre-qualifies prospects by insurance type, coverage needs, and budget range, so your agents focus on serious buyers only.'
+        title: 'Coverage Needs Discussion',
+        description: 'Asks about vehicles, property, business needs, current insurance costs, and coverage gaps to build a preliminary profile before your consultation.'
       },
       {
         icon: '📊',
-        title: 'Competitive Analysis Integration',
-        description: 'Captures what competitors quoted and identifies opportunities to win business with better rates or coverage options.'
+        title: 'Consultation Scheduling',
+        description: 'Books quote appointments at convenient times, explains your quote process, sends calendar invitations, and confirms via text message.'
       }
     ],
-    socialProof: 'Used by 225+ insurance agencies to increase quote conversion rates by 38% and close 25+ additional policies per month.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Insurance Success Plans',
       subheading: 'Convert more quotes into policies',
@@ -630,26 +630,26 @@ const verticalData = {
 
   'dental': {
     brand: 'DentalCallAI',
-    headline: 'Fill Your Schedule With New Patients',
-    subheading: 'Our AI handles appointment calls 24/7, qualifies new patients by insurance and treatment needs, and fills last-minute cancellations—maximizing your $2,000 new patient lifetime value.',
+    headline: 'Never Miss Another Patient Again',
+    subheading: 'Our AI handles new patient questions, verifies insurance, and books appointments—so you can focus on patient care, not phone management.',
     features: [
       {
         icon: '🦷',
-        title: 'New Patient Screening',
-        description: 'Pre-qualifies callers by insurance acceptance, treatment urgency, and budget to ensure good patient-practice fit before booking.'
+        title: 'New Patient Intake',
+        description: 'Answers calls before office hours, asks "Are you a new patient?", "What brings you in?", "Do you have dental insurance?", and begins the intake process before your staff arrives.'
       },
       {
         icon: '📅',
-        title: 'Smart Scheduling Optimization',
-        description: 'Automatically fills cancelled appointments and schedules new patients during optimal time slots to maximize practice revenue.'
+        title: 'Appointment Scheduling',
+        description: 'Books cleanings, emergency visits, and consultations by checking your calendar, offering available times, and sending appointment confirmations to patients.'
       },
       {
         icon: '💳',
-        title: 'Insurance Verification',
-        description: 'Instantly verifies insurance benefits and explains coverage to patients, reducing appointment no-shows and payment issues.'
+        title: 'Dental Emergency Screening',
+        description: 'Asks about pain level, swelling, broken teeth, or bleeding to determine if same-day emergency care is needed or if it can wait.'
       }
     ],
-    socialProof: 'Helping 140+ dental practices increase new patient bookings by 42% and reduce scheduling gaps by 60%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Dental Practice Growth Plans',
       subheading: 'Keep your schedule full and profitable',
@@ -736,26 +736,26 @@ const verticalData = {
 
   'auto-repair': {
     brand: 'AutoCallAI',
-    headline: 'Never Miss Another Breakdown Emergency',
-    subheading: 'Our AI handles automotive emergency calls 24/7, schedules urgent repairs instantly, and captures towing referrals—so you never lose an $800+ repair job to competitors again.',
+    headline: 'Never Miss Another Customer Again',
+    subheading: 'Our AI diagnoses car problems, coordinates towing, and schedules repairs with estimates—so you can stay under the hood, not on the phone.',
     features: [
       {
         icon: '🚗',
-        title: 'Emergency Breakdown Response',
-        description: 'Immediately identifies stranded motorists, coordinates towing services, and schedules repair appointments while customers are stressed and need help most.'
+        title: 'Breakdown Call Handling',
+        description: 'Answers immediately, asks "What\'s happening with your vehicle?", "Are you stranded?", "Where are you located?", and arranges towing if needed while booking the repair.'
       },
       {
         icon: '🔧',
-        title: 'Smart Service Scheduling',
-        description: 'Automatically books appointments based on repair type, parts availability, and bay capacity—optimizing your shop\'s workflow and revenue.'
+        title: 'Service Appointment Booking',
+        description: 'Schedules oil changes, inspections, and repairs by checking bay availability, asking about vehicle symptoms, and providing estimated completion times.'
       },
       {
         icon: '📋',
-        title: 'Detailed Problem Documentation',
-        description: 'Captures comprehensive vehicle information, symptoms, and customer concerns to help your technicians diagnose issues faster and more accurately.'
+        title: 'Repair Cost Questions',
+        description: 'Discusses common repair costs, explains diagnostic fees, provides ballpark estimates for typical jobs, and sets expectations before booking.'
       }
     ],
-    socialProof: 'Used by 175+ auto repair shops to increase emergency response bookings by 50% and reduce appointment scheduling time by 70%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Auto Repair Coverage Plans',
       subheading: 'Keep your bays full and customers happy',
@@ -842,26 +842,26 @@ const verticalData = {
 
   'pest-control': {
     brand: 'PestCallAI',
-    headline: 'Capture Every Emergency Infestation Call',
-    subheading: 'Our AI handles urgent pest emergencies 24/7, assesses infestation severity, and schedules immediate treatments—so you never miss a $1,500+ emergency job again.',
+    headline: 'Never Miss Another Call Again',
+    subheading: 'Our AI identifies pest issues, determines urgency, and schedules inspections or treatments—so you can focus on eliminating pests, not answering panicked calls.',
     features: [
       {
         icon: '🐛',
-        title: 'Emergency Infestation Triage',
-        description: 'Instantly identifies urgent pest problems like bed bugs, wasp nests, or rodent infestations that require immediate professional attention.'
+        title: 'Infestation Assessment',
+        description: 'Answers calls about pest problems, asks "What kind of pest are you seeing?", "Where in the home?", "How many have you seen?", and determines treatment urgency.'
       },
       {
         icon: '📅',
-        title: 'Smart Treatment Scheduling',
-        description: 'Automatically books follow-up treatments and seasonal services based on pest type and treatment protocols, maximizing customer lifetime value.'
+        title: 'Inspection & Treatment Scheduling',
+        description: 'Books inspection appointments, explains your treatment process, provides service cost estimates, and confirms scheduling via text.'
       },
       {
         icon: '🗺️',
-        title: 'Geographic Coverage Optimization',
-        description: 'Routes emergency calls to your nearest available technician and schedules regular service calls efficiently by geographic area.'
+        title: 'Pest Identification Help',
+        description: 'Discusses what homeowners are seeing to help identify bed bugs, termites, rodents, or other pests and recommend appropriate next steps.'
       }
     ],
-    socialProof: 'Trusted by 120+ pest control companies to increase emergency response bookings by 65% and improve customer retention by 40%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Pest Control Service Plans',
       subheading: 'Protect more homes and businesses',
@@ -946,26 +946,26 @@ const verticalData = {
 
   'veterinary': {
     brand: 'VetCallAI',
-    headline: 'Handle Pet Emergencies With Compassion',
-    subheading: 'Our AI manages emotional pet emergency calls 24/7, assesses medical urgency with empathy, and schedules urgent appointments—so worried pet parents always reach caring help.',
+    headline: 'Never Miss Another Visit Again',
+    subheading: 'Our AI triages pet symptoms, directs emergencies appropriately, and books appointments—so you can focus on treating animals, not managing worried calls.',
     features: [
       {
         icon: '❤️',
-        title: 'Compassionate Emergency Triage',
-        description: 'Uses empathetic language to calm worried pet owners while quickly assessing symptoms to determine if immediate veterinary care is needed.'
+        title: 'Compassionate Symptom Assessment',
+        description: 'Answers calls gently, asks "What\'s happening with your pet?", "How long has this been going on?", "Is your pet eating and drinking?", and provides caring guidance.'
       },
       {
         icon: '⏰',
-        title: 'Urgent Appointment Coordination',
-        description: 'Automatically prioritizes and schedules emergency appointments while managing routine wellness visits and follow-up care efficiently.'
+        title: 'Emergency vs. Routine Triage',
+        description: 'Determines if symptoms require immediate emergency care or can wait for a regular appointment, and directs pet parents to appropriate care based on severity.'
       },
       {
         icon: '📋',
-        title: 'Detailed Medical History Capture',
-        description: 'Gathers comprehensive pet health information, current symptoms, and medical history to help veterinarians prepare for appointments and provide better care.'
+        title: 'Appointment Booking',
+        description: 'Schedules wellness visits, vaccinations, and sick pet appointments by checking your calendar, asking about pet history, and confirming via text.'
       }
     ],
-    socialProof: 'Supporting 95+ veterinary clinics to improve emergency response times by 55% while maintaining the compassionate care pet families expect.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Veterinary Care Plans',
       subheading: 'Provide better care for more pets',
@@ -1051,26 +1051,26 @@ const verticalData = {
 
   'property-management': {
     brand: 'PropertyCallAI',
-    headline: 'Handle Tenant Emergencies Around The Clock',
-    subheading: 'Our AI manages urgent tenant calls 24/7, prioritizes maintenance requests by severity, and dispatches repair crews instantly—so you never lose tenants over slow emergency response.',
+    headline: 'Never Miss Another Lead Again',
+    subheading: 'Our AI handles tenant calls 24/7, triages maintenance issues, and creates work orders—so you\'re not on-call every night for minor issues.',
     features: [
       {
         icon: '🏠',
-        title: 'Smart Emergency Triage',
-        description: 'Instantly distinguishes between true emergencies (flooding, no heat, security issues) and routine maintenance requests, ensuring proper response prioritization.'
+        title: 'Emergency vs. Non-Emergency Screening',
+        description: 'Answers maintenance calls, asks "What\'s the issue?", "Is anyone in danger?", "Has anything been damaged?", and routes true emergencies to your on-call staff while scheduling routine repairs.'
       },
       {
         icon: '🔧',
-        title: 'Automated Work Order Creation',
-        description: 'Generates detailed work orders with tenant contact info, unit details, and problem descriptions, automatically routing to appropriate maintenance staff.'
+        title: 'Work Order Creation',
+        description: 'Captures detailed maintenance requests, tenant contact info, unit number, access instructions, and problem descriptions to send your maintenance team.'
       },
       {
         icon: '📱',
-        title: 'Real-Time Tenant Communication',
-        description: 'Keeps tenants informed about repair status and arrival times, reducing follow-up calls and improving tenant satisfaction scores.'
+        title: 'Tenant Question Handling',
+        description: 'Answers common questions about rent payment, lease terms, amenities, parking, and pet policies based on your property rules.'
       }
     ],
-    socialProof: 'Used by 85+ property management companies to reduce tenant emergency response time by 60% and decrease maintenance-related move-outs by 35%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Property Management Plans',
       subheading: 'Keep tenants happy and properties profitable',
@@ -1157,26 +1157,26 @@ const verticalData = {
 
   'lawn-care': {
     brand: 'LawnCallAI',
-    headline: 'Never Miss Spring Rush Bookings Again',
-    subheading: 'Our AI handles seasonal call spikes 24/7, schedules lawn treatments automatically, and manages recurring services—so you capture every $200+ job during peak season without adding office staff.',
+    headline: 'Never Miss Another Job Again',
+    subheading: 'Our AI captures service needs, provides pricing, and books appointments by address—so you can stay on the mower, not answering spring rush calls.',
     features: [
       {
         icon: '🌱',
-        title: 'Seasonal Surge Management',
-        description: 'Automatically handles the massive influx of spring cleanup and treatment calls when your phone rings non-stop from March through May.'
+        title: 'Service Request Handling',
+        description: 'Answers calls about lawn care, asks "What service do you need?", "How big is your lawn?", "When would you like us to come?", and explains your service offerings.'
       },
       {
         icon: '📅',
-        title: 'Smart Route Scheduling',
-        description: 'Books new services based on geographic efficiency and existing route optimization, maximizing daily revenue per truck.'
+        title: 'Appointment & Route Scheduling',
+        description: 'Books new clients based on geographic efficiency, offers available service days, confirms lawn size and access, and schedules recurring services.'
       },
       {
         icon: '🔄',
-        title: 'Recurring Service Automation',
-        description: 'Automatically schedules weekly mowing, monthly treatments, and seasonal services, building predictable recurring revenue streams.'
+        title: 'Pricing & Package Questions',
+        description: 'Discusses lawn care packages, one-time services, seasonal pricing, and treatment options based on customer needs and your service menu.'
       }
     ],
-    socialProof: 'Helping 110+ lawn care companies capture 45% more spring bookings and increase recurring service retention by 55%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Lawn Care Growth Plans',
       subheading: 'Grow your business without growing your overhead',
@@ -1263,26 +1263,26 @@ const verticalData = {
 
   'mortgage-broker': {
     brand: 'MortgageCallAI',
-    headline: 'Close More Loans By Responding Instantly',
-    subheading: 'Our AI captures mortgage inquiries 24/7, pre-qualifies borrowers immediately, and delivers hot leads to your desk—so you never lose a $6K commission to faster competitors again.',
+    headline: 'Never Miss Another Lead Again',
+    subheading: 'Our AI calls leads in 60 seconds, captures loan details, and schedules consultations—so you close more loans while in underwriting meetings.',
     features: [
       {
         icon: '⚡',
-        title: 'Lightning-Fast Rate Quotes',
-        description: 'Provides preliminary rate estimates and payment calculations within 60 seconds, keeping prospects engaged while they\'re actively shopping.'
+        title: 'Instant Lead Callback',
+        description: 'Calls web inquiries within 60 seconds, asks "Are you buying or refinancing?", "What\'s your loan amount?", "What rate were you quoted elsewhere?", and captures key borrower details.'
       },
       {
         icon: '📊',
-        title: 'Instant Pre-Qualification',
-        description: 'Gathers income, credit score, and down payment information to determine loan eligibility before competitors even call back.'
+        title: 'Loan Pre-Qualification',
+        description: 'Asks about income, credit score, down payment, and employment to provide preliminary qualification feedback before your detailed consultation.'
       },
       {
         icon: '🏃',
-        title: 'Speed-to-Lead Victory',
-        description: 'Responds to all inquiries within 30 seconds, giving you the critical first-mover advantage in today\'s rate-sensitive market.'
+        title: 'Consultation Scheduling',
+        description: 'Books appointments for full loan applications, explains required documents, sends calendar invites, and confirms via text message.'
       }
     ],
-    socialProof: 'Trusted by 180+ mortgage professionals to increase loan application conversions by 52% and close 8+ additional loans per month.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Mortgage Success Plans',
       subheading: 'Close more loans with instant response',
@@ -1363,26 +1363,26 @@ const verticalData = {
 
   'general-contractors': {
     brand: 'ContractorCallAI',
-    headline: 'Convert Project Inquiries Into Signed Contracts',
-    subheading: 'Our AI captures construction project calls 24/7, qualifies homeowners by budget and timeline, and books estimates instantly—so you never miss a $25K+ project again.',
+    headline: 'Never Miss Another Project Again',
+    subheading: 'Our AI captures project scope, discusses budget/timeline, and schedules estimates—so you can focus on building, not phone screening.',
     features: [
       {
         icon: '🏗️',
-        title: 'Project Scope Assessment',
-        description: 'Intelligently gathers project details, timeline requirements, and budget ranges to help you prioritize high-value opportunities.'
+        title: 'Project Inquiry Handling',
+        description: 'Answers calls about construction projects, asks "What are you looking to build or remodel?", "What\'s your timeline?", "Do you have a budget in mind?", and captures scope details.'
       },
       {
         icon: '📋',
-        title: 'Instant Estimate Scheduling',
-        description: 'Automatically coordinates site visits based on your availability and project location, optimizing your sales team\'s time.'
+        title: 'Estimate Appointment Booking',
+        description: 'Schedules on-site estimates, captures property address and access instructions, explains your estimate process, and confirms appointments.'
       },
       {
         icon: '💰',
-        title: 'Budget Pre-Qualification',
-        description: 'Tactfully determines homeowner budget and financing readiness before you invest time in detailed estimates.'
+        title: 'Budget & Timeline Discussion',
+        description: 'Discusses project costs, typical timelines for different job types, required permits, and sets realistic expectations before the estimate visit.'
       }
     ],
-    socialProof: 'Used by 95+ general contractors to increase project inquiry conversion by 65% and add $400K+ in annual contract value.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Construction Business Plans',
       subheading: 'Build more projects with better leads',
@@ -1469,18 +1469,18 @@ const verticalData = {
 
   'accounting': {
     brand: 'AccountingCallAI',
-    headline: 'Handle Tax Season Rush Without Burning Out',
-    subheading: 'Our AI manages client calls during peak tax season, schedules appointments efficiently, and captures new client inquiries—so you never miss revenue opportunities when you\'re busiest.',
+    headline: 'Never Miss Another Client Again',
+    subheading: 'Our AI manages tax season calls, captures new client inquiries, and schedules appointments—so you can focus on returns, not reception duties.',
     features: [
       {
         icon: '📊',
         title: 'Tax Season Call Management',
-        description: 'Handles the overwhelming volume of client calls from January through April when your phones ring constantly with questions and appointment requests.'
+        description: 'Handles the overwhelming volume of client calls from January through April, asks "Do you need tax prep, a consultation, or have a question?", and routes appropriately.'
       },
       {
         icon: '📅',
         title: 'Smart Appointment Optimization',
-        description: 'Automatically schedules tax prep appointments, quarterly reviews, and consultations based on service type and CPA availability.'
+        description: 'Automatically schedules tax prep appointments, quarterly reviews, and consultations based on service type and CPA availability without interrupting your work.'
       },
       {
         icon: '💼',
@@ -1488,7 +1488,7 @@ const verticalData = {
         description: 'Pre-screens potential clients by business complexity, service needs, and engagement value to help you focus on profitable relationships.'
       }
     ],
-    socialProof: 'Supporting 75+ accounting firms to reduce tax season stress by 50% and capture 30% more new clients during peak periods.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Accounting Practice Plans',
       subheading: 'Stay organized during your busiest seasons',
@@ -1575,26 +1575,26 @@ const verticalData = {
 
   'physical-therapy': {
     brand: 'PhysioCallAI',
-    headline: 'Streamline Insurance Authorization Calls',
-    subheading: 'Our AI handles insurance verification, pre-authorization requests, and appointment scheduling—so you spend more time treating patients and less time on hold with insurance companies.',
+    headline: 'Never Miss Another Appointment Again',
+    subheading: 'Our AI handles billing questions, verifies insurance, and schedules evaluations—so you can focus on patient treatment, not administrative calls.',
     features: [
       {
         icon: '🏥',
-        title: 'Insurance Pre-Auth Automation',
-        description: 'Automatically verifies insurance benefits and initiates prior authorization requests, reducing administrative delays that postpone treatment.'
+        title: 'New Patient Intake',
+        description: 'Answers injury calls, asks "What happened?", "Where does it hurt?", "Do you have insurance?", and begins the intake process before the first appointment.'
       },
       {
         icon: '📅',
-        title: 'Smart Patient Scheduling',
-        description: 'Coordinates initial evaluations, follow-up sessions, and discharge planning based on insurance coverage and therapist availability.'
+        title: 'Appointment Scheduling',
+        description: 'Books initial evaluations, follow-up sessions, and discharge planning based on insurance coverage and therapist availability without interrupting your treatment time.'
       },
       {
         icon: '📋',
-        title: 'Treatment Documentation Support',
-        description: 'Captures patient symptoms, injury details, and treatment goals to help therapists prepare comprehensive care plans faster.'
+        title: 'Insurance Verification',
+        description: 'Collects insurance information, explains coverage and copays, discusses pre-authorization if needed, and sets payment expectations.'
       }
     ],
-    socialProof: 'Helping 60+ physical therapy clinics reduce insurance processing time by 70% and increase patient appointment bookings by 40%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Physical Therapy Practice Plans',
       subheading: 'Spend more time treating, less time on admin',
@@ -1682,17 +1682,17 @@ const verticalData = {
   'hair-salons': {
     brand: 'StyleCallAI',
     headline: 'Never Miss Another Booking Again',
-    subheading: 'Our AI handles appointment scheduling, rebooking, and client consultations 24/7—turning missed calls into $200+ service bookings.',
+    subheading: 'Our AI checks availability, books appointments, and sends confirmations—so you can focus on your current client, not your ringing phone.',
     features: [
       {
         icon: '✂️',
         title: '24/7 Appointment Booking',
-        description: 'Schedules cuts, colors, and treatments instantly by checking stylist availability and managing your booking calendar in real-time.'
+        description: 'Schedules cuts, colors, and treatments instantly by checking stylist availability and managing your booking calendar in real-time without interrupting your work.'
       },
       {
         icon: '💬',
         title: 'Service Consultation',
-        description: 'Discusses hair goals, previous treatments, and allergies to recommend appropriate services and estimate timing and pricing.'
+        description: 'Discusses hair goals, previous treatments, and allergies to recommend appropriate services and estimate timing and pricing before booking.'
       },
       {
         icon: '📱',
@@ -1700,7 +1700,7 @@ const verticalData = {
         description: 'Sends appointment confirmations, reminder texts, and follow-up messages to reduce no-shows and encourage rebooking.'
       }
     ],
-    socialProof: 'Used by 200+ salons and stylists to reduce booking admin time by 80% and increase client retention by 35%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Salon & Stylist Plans',
       subheading: 'Focus on styling, not scheduling',
@@ -1787,13 +1787,13 @@ const verticalData = {
   
   'fitness-studios': {
     brand: 'FitCallAI',
-    headline: 'Never Miss Another Membership Lead Again',
-    subheading: 'Our AI handles membership inquiries, class bookings, and trial signups 24/7—turning after-hours calls into $150+ monthly memberships.',
+    headline: 'Never Miss Another Member Again',
+    subheading: 'Our AI captures fitness goals, discusses membership options, and books trials/tours—so you can lead that packed class without missing new members.',
     features: [
       {
         icon: '🏋️',
-        title: 'Membership Sales Assistant',
-        description: 'Answers questions about membership options, pricing, and facility amenities while scheduling tours and free trial sessions.'
+        title: 'Membership Inquiry Handling',
+        description: 'Answers questions about memberships, asks "What are your fitness goals?", "What classes interest you?", explains pricing and packages, and schedules facility tours.'
       },
       {
         icon: '📅',
@@ -1802,11 +1802,11 @@ const verticalData = {
       },
       {
         icon: '💪',
-        title: 'Member Retention Support',
-        description: 'Handles billing questions, freeze requests, and cancellation attempts while offering retention incentives and program alternatives.'
+        title: 'Trial Session Scheduling',
+        description: 'Offers free trial classes to prospects, captures contact info and availability, sends class schedules and what-to-bring instructions.'
       }
     ],
-    socialProof: 'Powering 180+ fitness studios to increase membership conversions by 45% and reduce front desk administrative time by 60%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Fitness Studio Plans',
       subheading: 'Grow your community, automate your admin',
@@ -1894,26 +1894,26 @@ const verticalData = {
   
   'urgent-care': {
     brand: 'UrgentCallAI',
-    headline: 'Never Miss Another Patient Again',
-    subheading: 'Our HIPAA-compliant AI handles patient triage, appointment scheduling, and insurance verification 24/7—ensuring critical care access around the clock.',
+    headline: 'Never Miss Another Visit Again',
+    subheading: 'Our AI triages symptoms, provides wait times, and captures patient information—so your staff focuses on walk-ins, not constant phone interruptions.',
     features: [
       {
         icon: '🏥',
         title: 'Medical Triage Assistant',
-        description: 'Assesses symptom urgency, directs patients to appropriate care levels, and schedules urgent appointments based on clinical protocols.'
+        description: 'Assesses symptom urgency, asks "What are your symptoms?", "How long has this been going on?", "Do you have insurance?", and directs patients to appropriate care levels.'
       },
       {
         icon: '🔍',
         title: 'Insurance Verification',
-        description: 'Verifies coverage, explains benefits, and estimates patient costs before arrival to streamline check-in and reduce billing delays.'
+        description: 'Collects insurance information, verifies coverage, explains copays and costs, and pre-registers patients before arrival to streamline check-in.'
       },
       {
         icon: '📋',
-        title: 'Pre-Visit Documentation',
-        description: 'Collects patient history, current medications, and visit reasons to help providers prepare and reduce wait times.'
+        title: 'Wait Time Communication',
+        description: 'Provides current wait time estimates, explains what to bring, sends address and parking instructions, and updates patients if delays occur.'
       }
     ],
-    socialProof: 'Trusted by 90+ urgent care centers to reduce wait times by 25% and increase patient satisfaction scores by 40%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Urgent Care Plans',
       subheading: 'Streamline patient access, improve care delivery',
@@ -2000,26 +2000,26 @@ const verticalData = {
   
   'locksmith': {
     brand: 'LockCallAI',
-    headline: 'Never Miss Another Emergency Call Again',
-    subheading: 'Our AI handles lockout emergencies, security consultations, and service bookings 24/7—turning urgent calls into $150+ service visits.',
+    headline: 'Never Miss Another Call Again',
+    subheading: 'Our AI handles 24/7 emergencies, provides pricing, and dispatches nearest technician—so every stranded customer gets help, even at 2 AM.',
     features: [
       {
         icon: '🔐',
         title: 'Emergency Lockout Response',
-        description: 'Handles urgent lockout calls, provides pricing estimates, and dispatches nearest available technician with ETA updates.'
+        description: 'Handles urgent lockout calls, asks "What are you locked out of?", "Where are you located?", "Do you need emergency service?", and dispatches immediately with all details.'
       },
       {
         icon: '🏠',
-        title: 'Security Consultation',
-        description: 'Discusses security needs, recommends lock upgrades, and schedules assessment visits for residential and commercial properties.'
+        title: 'Service Pricing & Dispatch',
+        description: 'Provides upfront locksmith pricing for different services, confirms customer location, dispatches nearest available technician, and sends arrival time estimates.'
       },
       {
         icon: '⏰',
-        title: 'Service Coordination',
-        description: 'Manages technician schedules, handles service callbacks, and coordinates follow-up visits for warranty work and installations.'
+        title: 'Security Consultation Scheduling',
+        description: 'Books appointments for lock installations, rekeying, and security assessments by capturing property details and scheduling convenient times.'
       }
     ],
-    socialProof: 'Helping 120+ locksmiths capture 90% more emergency calls and increase average job value by $75.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Locksmith Service Plans',
       subheading: 'Secure more business, streamline dispatch',
@@ -2106,26 +2106,26 @@ const verticalData = {
   
   'mental-health': {
     brand: 'MindCallAI',
-    headline: 'Never Miss Another Client Connection Again',
-    subheading: 'Our HIPAA-compliant AI handles intake calls, crisis support triage, and appointment scheduling 24/7—ensuring mental health support is always accessible.',
+    headline: 'Never Miss Another Client Again',
+    subheading: 'Our AI handles calls with empathy, verifies insurance, and schedules sessions—so you can focus on your current session, not missed calls.',
     features: [
       {
         icon: '🧠',
-        title: 'Crisis Triage Support',
-        description: 'Provides immediate crisis assessment, safety planning resources, and emergency service coordination while connecting clients to appropriate care levels.'
+        title: 'Compassionate Intake Support',
+        description: 'Answers calls empathetically, asks "How can we help you?", "Have you been in therapy before?", "What brings you in?", and begins the intake process respectfully.'
       },
       {
         icon: '📅',
         title: 'Therapeutic Appointment Matching',
-        description: 'Matches clients with therapists based on specialties, insurance coverage, and availability while handling intake paperwork coordination.'
+        description: 'Books therapy sessions based on therapist specialties, availability, and client needs while handling insurance verification and copay discussions.'
       },
       {
         icon: '💬',
-        title: 'Confidential Intake Processing',
-        description: 'Conducts secure initial assessments, collects treatment history, and coordinates care plans while maintaining strict privacy standards.'
+        title: 'Crisis Resource Directory',
+        description: 'Recognizes urgent situations, provides immediate crisis helpline numbers and emergency resources, and escalates to on-call clinicians when appropriate.'
       }
     ],
-    socialProof: 'Supporting 150+ mental health professionals to reduce intake processing time by 60% and improve client access to care.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Mental Health Practice Plans',
       subheading: 'Expand access, maintain confidentiality',
@@ -2213,26 +2213,26 @@ const verticalData = {
   
   'pet-grooming': {
     brand: 'GroomCallAI',
-    headline: 'Never Miss Another Pampering Appointment Again',
-    subheading: 'Our AI handles pet grooming bookings, breed consultations, and service recommendations 24/7—turning missed calls into $80+ grooming appointments.',
+    headline: 'Never Miss Another Appointment Again',
+    subheading: 'Our AI captures breed and service needs, provides pricing, and books appointments—so you can focus on the dog in front of you, not scheduling chaos.',
     features: [
       {
         icon: '🐕',
         title: 'Breed-Specific Booking',
-        description: 'Schedules grooming appointments based on breed requirements, coat type, and service history while managing groomer availability.'
+        description: 'Schedules grooming appointments, asks "What breed is your pet?", "What grooming services do you need?", "When would you like to come in?", and provides service time estimates.'
       },
       {
         icon: '✂️',
         title: 'Service Consultation',
-        description: 'Discusses grooming needs, recommends appropriate services, and provides pricing estimates based on pet size and coat condition.'
+        description: 'Discusses grooming needs, coat condition, special requests, health issues that affect grooming, and recommends appropriate services with pricing.'
       },
       {
         icon: '📱',
-        title: 'Pet Parent Communication',
-        description: 'Sends appointment reminders, pickup notifications, and grooming care tips while handling rescheduling and special requests.'
+        title: 'Appointment Reminders',
+        description: 'Sends booking confirmations, day-before reminders, and pickup notifications to reduce no-shows and keep your schedule full.'
       }
     ],
-    socialProof: 'Used by 180+ pet groomers to reduce booking time by 75% and increase appointment retention by 45%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Pet Grooming Plans',
       subheading: 'More time grooming, less time on the phone',
@@ -2319,18 +2319,18 @@ const verticalData = {
   
   'dry-cleaning': {
     brand: 'CleanCallAI',
-    headline: 'Never Miss Another Pickup Again',
-    subheading: 'Our AI handles garment intake, delivery coordination, and special care consultations 24/7—turning missed calls into $35+ cleaning orders.',
+    headline: 'Never Miss Another Order Again',
+    subheading: 'Our AI provides garment pricing, schedules pickups/deliveries, and handles order status—so you can focus on quality cleaning, not phone interruptions.',
     features: [
       {
         icon: '👔',
         title: 'Garment Care Consultation',
-        description: 'Discusses fabric types, stain removal needs, and special handling requirements while providing accurate pricing and timing estimates.'
+        description: 'Discusses fabric types and cleaning needs, asks "What needs cleaning?", "Are there any stains?", "When do you need it back?", and provides accurate pricing.'
       },
       {
         icon: '🚚',
         title: 'Pickup & Delivery Coordination',
-        description: 'Schedules convenient pickup and delivery times, manages route optimization, and handles special delivery instructions.'
+        description: 'Schedules convenient pickup and delivery times, manages route optimization, handles special delivery instructions, and confirms appointments.'
       },
       {
         icon: '⏰',
@@ -2338,7 +2338,7 @@ const verticalData = {
         description: 'Provides real-time updates on cleaning progress, sends ready-for-pickup notifications, and handles customer inquiries about orders.'
       }
     ],
-    socialProof: 'Serving 150+ dry cleaners to increase order volume by 40% and reduce front desk administrative time by 65%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Dry Cleaning Plans',
       subheading: 'Focus on cleaning, automate communication',
@@ -2425,26 +2425,26 @@ const verticalData = {
   
   'equipment-rental': {
     brand: 'RentCallAI',
-    headline: 'Never Miss Another Rental Opportunity Again',
-    subheading: 'Our AI handles equipment inquiries, availability checks, and rental bookings 24/7—turning after-hours calls into $200+ daily rentals.',
+    headline: 'Never Miss Another Rental Again',
+    subheading: 'Our AI checks availability, provides pricing/terms, and books rentals with delivery—so you can manage the yard, not juggle inquiry calls.',
     features: [
       {
         icon: '🚜',
         title: 'Equipment Availability Engine',
-        description: 'Checks real-time inventory, provides pricing quotes, and books equipment rentals based on customer project needs and timeline.'
+        description: 'Checks real-time inventory, asks "What equipment do you need?", "When do you need it?", "How long do you need it?", and provides pricing for different rental periods.'
       },
       {
         icon: '📋',
         title: 'Project Consultation',
-        description: 'Discusses project requirements, recommends appropriate equipment, and calculates total rental costs including delivery and insurance.'
+        description: 'Discusses project requirements, recommends appropriate equipment, calculates total rental costs including delivery, and ensures proper equipment selection.'
       },
       {
         icon: '🚚',
         title: 'Delivery Coordination',
-        description: 'Schedules equipment delivery and pickup times, manages driver routes, and handles special delivery requirements and job site access.'
+        description: 'Schedules equipment delivery and pickup times, captures job site addresses and access details, manages driver routes, and sends delivery confirmations.'
       }
     ],
-    socialProof: 'Powering 100+ equipment rental companies to increase utilization rates by 35% and reduce booking administrative time by 70%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Equipment Rental Plans',
       subheading: 'Maximize utilization, minimize admin',
@@ -2532,26 +2532,26 @@ const verticalData = {
   
   'storage-facilities': {
     brand: 'StoreCallAI',
-    headline: 'Never Miss Another Unit Rental Again',
-    subheading: 'Our AI handles storage inquiries, unit availability, and move-in coordination 24/7—turning missed calls into $150+ monthly rentals.',
+    headline: 'Never Miss Another Inquiry Again',
+    subheading: 'Our AI checks unit availability, provides pricing, and schedules tours or move-ins—so you capture every lead, even after hours.',
     features: [
       {
         icon: '🏢',
         title: 'Unit Availability & Pricing',
-        description: 'Provides real-time unit availability, customized pricing based on size and features, and schedules facility tours for prospective renters.'
+        description: 'Provides real-time unit availability, asks "How much space do you need?", "When do you need to move in?", explains pricing and features for different unit sizes.'
       },
       {
         icon: '📦',
         title: 'Storage Needs Assessment',
-        description: 'Assesses customer storage requirements, recommends appropriate unit sizes, and explains facility features like climate control and security.'
+        description: 'Assesses customer storage requirements, recommends appropriate unit sizes, explains facility features like climate control and security, and answers access questions.'
       },
       {
         icon: '🔐',
-        title: 'Move-In Coordination',
-        description: 'Handles lease documentation, coordinates move-in appointments, and manages payment processing while ensuring smooth facility access setup.'
+        title: 'Tour & Move-In Scheduling',
+        description: 'Books facility tours at convenient times, schedules move-in appointments, explains lease terms and payment options, and sends directions.'
       }
     ],
-    socialProof: 'Supporting 120+ storage facilities to increase occupancy rates by 30% and reduce leasing administrative time by 80%.',
+    socialProof: 'Available 24/7',
     pricing: {
       headline: 'Storage Facility Plans',
       subheading: 'Fill units faster, manage smarter',
